@@ -1,7 +1,7 @@
 from .models import Account
 from rest_framework import viewsets
 from .serializers import AccountSerializer
-
+from res
 
 class AccountViewSet(viewsets.ModelViewSet):
     """
@@ -9,3 +9,4 @@ class AccountViewSet(viewsets.ModelViewSet):
     """
     serializer_class = AccountSerializer
     queryset = Account.objects.all()
+    permissions_classes = [IsAdminn]
